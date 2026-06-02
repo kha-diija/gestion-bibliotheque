@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa, #ab47bc, #d81b60);
+    color: #fff;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #6a1b9a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #8e24aa;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f3e5f5;
+}
+
+button {
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6a1b9a;
+}
+
+.search-bar input[type="text"] {
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 900px; /* Limite de largeur */
+    font-size: 16px;
+    border: 2px solid #d1c4e9; /* Mauve clair */
+    border-radius: 8px;
+    background: #ede7f6; /* Mauve clair */
+    color: #4a148c; /* Mauve foncé */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #4a148c; /* Mauve foncé */
+    font-style: italic; /* Italique pour l'espace réservé */
+}
+
+.search-bar input[type="text"]:focus {
+    outline: none; /* Pas de contour lors du focus */
+    border-color: #9575cd; /* Mauve intermédiaire */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Ombre lors du focus */
+}
+
+.search-bar input[type="text"]:hover {
+    background: #d1c4e9; /* Mauve clair survol */
+    border-color: #7e57c2; /* Mauve légèrement foncé */
+}

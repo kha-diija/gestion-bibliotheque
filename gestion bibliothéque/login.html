@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - Bibliothèque</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Ajouter vos styles ici -->
+  <script>
+    async function validateForm(event) {
+      event.preventDefault();
+
+      // Récupérer les valeurs des champs
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Créer un objet FormData
+      const formData = new FormData();
+      formData.append("email", username);
+      formData.append("password", password);
+
+      try {
+        // Envoyer les données au serveur
+        const response = await fetch("login.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        // Récupérer la réponse du serveur
+        const data = await response.json();
+
+        if (data.success) {
+          if (data.poste === "Principal") {
+            window.location.href = "admin.php"; // Rediriger vers la page admin
+          } else if (data.poste === "Stagiaire") {
+            window.location.href = "stagiaire.php"; // Rediriger vers la page stagiaire
+          }
+        } else {
+          alert(data.message);  // Afficher l'erreur du backend
+        }
+      } catch (error) {
+        console.error("Erreur :", error);
+        alert("Erreur de connexion.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Connexion</h1>
+    <form id="loginForm" onsubmit="validateForm(event)">
+      <div class="input-group">
+        <label for="username">Adresse Email</label>
+        <input type="email" id="username" name="username" placeholder="Entrez votre email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+      </div>
+      <button type="submit">Se connecter</button>
+    </form>
+    <p>
+      <a href="reset_password.html">Changer le mot de passe ?</a>
+    </p>
+  </div>
+</body>
+</html>

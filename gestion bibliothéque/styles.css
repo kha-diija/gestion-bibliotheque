@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('backpage1.jpg'); /* Chemin relatif si l'image est dans un dossier Documents */
+  background-size: cover; /* L'image couvre tout l'écran */
+  background-position: center; /* L'image est centrée */
+  background-repeat: no-repeat; /* Pas de répétition */
+  background-color: #f4f4f9; /* Couleur de secours */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Formulaire */
+form {
+  background-color: rgba(255, 255, 255, 0); /* Fond totalement transparent */
+  padding: 50px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour rendre le formulaire visible */
+}
+
+/* Container du formulaire */
+.login-container {
+  background: rgba(230, 170, 250, 0.7); /* Couleur mauve clair avec 50% de transparence */
+   padding: 2rem 2rem 2rem 2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile pour plus de visibilité */
+  width: 400px;
+  text-align: center;
+}
+
+.login-container h1 {
+  margin-bottom: 1.5rem;
+  color: #6a4c9c; /* Couleur mauve clair pour le titre */
+}
+
+/* Groupes d'entrées */
+.input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #6a4c9c; /* Couleur mauve clair pour les labels */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Bouton */
+button {
+  background-color: #9b59b6; /* Couleur mauve clair */
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #8e44ad; /* Mauve plus foncé au survol */
+}
+
+
+.forgot-password {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forgot-password a {
+  color: #804c74; /* Couleur légèrement plus foncée */
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.forgot-password a:hover {
+  color: #6b3c61; /* Couleur plus foncée au survol */
+}
+
+.signup-text {
+  margin-top: 1rem;
+  font-size: 0.85rem; /* Aligné avec .forgot-password */
+  display: inline-flex; /* Mettre sur la même ligne */
+  align-items: center; /* Alignement vertical centré */
+  color: #804c74; /* Couleur légèrement plus foncée */
+  font-weight: 5;
+}
+
+.signup-text span {
+  margin-right: 0.5rem; /* Espacement entre "Vous n'avez pas de compte ?" et "Inscription" */
+}
+
+.signup-link {
+  font-weight: 700; /* Un peu plus épais */
+  color: #804c74; /* Couleur alignée */
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  color: #8e44ad; /* Couleur au survol plus foncée */
+}
+
+
+
+
+
+/* Vous pouvez ajouter un style d'erreur ici si nécessaire */
+#usernameError, #passwordError {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
